@@ -35,7 +35,7 @@ hbs.registerHelper(`weatherResults`,(lag,lng)=>{
       lag=req.query.lag;
       lng=req.query.lng;
       // weather = weather.weatherResults(lag,lng);
-      weather.weatherResults(lag,lng)
+  weather.weatherResults(lag,lng)
   .then((response)=>{
     res.render(`./index.hbs`,{
     images:images,
@@ -49,9 +49,9 @@ hbs.registerHelper(`weatherResults`,(lag,lng)=>{
 
   })
 })
-// .catch(error)=>{
-//   console.log("There is an error");
-// }
+.catch(error)=>{
+  console.log("There is an error");
+}
 // })
 })
 //   res.render(`./index.hbs`,{
